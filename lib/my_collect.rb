@@ -1,11 +1,10 @@
-def my_collect(collection)
-  my_collect = []
-  i=0
-  while i < my_collect.length
-         my_collect << yield[collection]
-        i = i + 1
-    end
-   my_collect    
-
+def my_collect(array)
+  i = 0
+  collection = []
+  while i < array.count
+    collection << yield(array[i])
+    i += 1
+  end
+  collection
 end
 
